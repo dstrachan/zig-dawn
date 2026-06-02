@@ -4,6 +4,10 @@
     .fingerprint = 0xde0b5ed2c3fa633f,
     .minimum_zig_version = "0.17.0-dev.256+04481c76c",
     .dependencies = .{
+        .dawn = .{
+            .url = "https://github.com/google/dawn/releases/download/v20260423.175430/dawn-headers-31e25af254ab572c77054edec4946d2244e184dd.tar.gz",
+            .hash = "N-V-__8AADSpZAOImIKqHHYUEo0QavHWXdGsLLGT6THB3dqT",
+        },
         .dawn_aarch64_macos = .{
             .url = "https://github.com/google/dawn/releases/download/v20260423.175430/Dawn-31e25af254ab572c77054edec4946d2244e184dd-macos-latest-Release.tar.gz",
             .hash = "N-V-__8AAKAIRgIcklgw4QAAOO4FWz7f3OhSRMBxQm-peBnG",

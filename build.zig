@@ -4,10 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const dawn_dep = switch (target.result.os.tag) {
-        .macos => b.lazyDependency("dawn_aarch64_macos", .{}),
-        else => |t| std.debug.panic("Unsupported OS: {t}", .{t}),
-    } orelse @panic("Missing dawn dependency");
+    const dawn_dep = b.dependency("dawn", .{});
 
     const translate_c = b.addTranslateC(.{
         .root_source_file = dawn_dep.path("include/webgpu/webgpu.h"),
